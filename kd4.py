@@ -20,13 +20,14 @@ def armstrong(n):
     rem=0
     b=n
     l=len(str(n))
-    while(n!=0):
-        rem=n%10
-        sum1=sum1 + rem**l
-        n=n//10 #use // floor divison to tale n =int otherwise a will became float
-
-    if(b==sum1):
-        return True
+    if(l>=3):
+        while(n!=0):
+            rem=n%10
+            sum1=sum1 + rem**l
+            n=n//10 #use // floor divison to tale n =int otherwise a will became float
+    
+        if(b==sum1):
+            return True
     return False
 
 def palindrome(n):
